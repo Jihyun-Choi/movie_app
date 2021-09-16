@@ -7,10 +7,11 @@ class App extends React.Component {
   };
   //add와 minus는 자바스크립트!
   add = () => {
-    console.log("add");
+    this.setState(current => ({ count: current.count + 1 }));
   };
   minus = () => {
-    console.log("minus");
+    // console.log("minus"); 이런 conole.log는 왜 하는거지?
+    this.setState(current => ({ count: current.count - 1 }));
   };
 
   render() {
