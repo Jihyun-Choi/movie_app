@@ -1,7 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react" 
 
 class App extends React.Component {
+  constructor(){
+    console.log("hello")
+  }
   state = {
     count: 0
   };
@@ -14,7 +16,15 @@ class App extends React.Component {
     this.setState(current => ({ count: current.count - 1 }));
   };
 
+componentDidMount() {//컴포넌트 생명주기를 알아보기 위한 log
+    console.log("Component rendered")
+}
+componentDidUpdate () {//컴포넌트 생명주기를 알아보기 위한 log
+  console.log("I just updated")
+}
+
   render() {
+    console.log("I'm rendering")//컴포넌트 생명주기를 알아보기 위한 log
     return (
       <div>
         <h1>The number is {this.state.count}</h1>
