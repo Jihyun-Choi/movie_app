@@ -10,9 +10,9 @@ class App extends React.Component {
   getMovies = async () => {
     const {
       data: {
-        data: { movies }
-      }
-    } = axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating")
+        data: { movies } //,가 있어도 되고 없어도 되고??
+      }//, 무슨 차이죠??
+    } = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating")
     this.setState({ movies, isLoading: false })
   };
   componentDidMount() {
