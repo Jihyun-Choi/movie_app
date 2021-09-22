@@ -1,6 +1,7 @@
 import React from "react"; 
 import axios from "axios";
 import Movie from "./Movie";
+import "./App.css";
 
 class App extends React.Component {
   state = {
@@ -20,19 +21,28 @@ class App extends React.Component {
   }
   render() {
     const { isLoading, movies } = this.state;
-    return <div>{isLoading 
-      ? "Loading..." 
-      : movies.map(movie => ( 
-          <Movie
-            key={movie.id}
-            id={movie.id} 
-            year={movie.year}  
-            title={movie.title}  
-            summary={movie.summary}  
-            poster={movie.medium_cover_image} 
-          />
-      ))}
-    </div>;
+    return (  //괄호와 대괄호가 중구난방, 내눈엔 너무 더러운데 이게 최선인가?
+      <section class="container">
+        {isLoading ? (
+          <div class="loader">
+            <span class="loader__text">Loading...</span>
+          </div> 
+        ) : (
+          <div class="movie">            
+            {movies.map(movie => ( 
+              <Movie
+                key={movie.id}
+                id={movie.id} 
+                year={movie.year}  
+                title={movie.title}  
+                summary={movie.summary}  
+                poster={movie.medium_cover_image} 
+              />
+            ))}
+          </div>
+        )}
+     </section>
+    );
   }
 }
 
