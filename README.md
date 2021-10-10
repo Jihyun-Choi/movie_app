@@ -7,3 +7,6 @@ React JS Fundamentals Course (start 21.9.12~)
 
 
 [Records of studying in Underdog Revolution with four team members in a React study](https://udr.oopy.io/d7cb30ff-60ef-43f8-a9db-4343aeda52c1)
+
+
+![image](https://user-images.githubusercontent.com/70438098/136655399-f79bcd44-d46a-4c9b-a1f4-eb4c10caf409.png)
