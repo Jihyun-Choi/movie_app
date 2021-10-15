@@ -14,13 +14,30 @@ class Detail extends React.Component {
       return (
         <div className="detail__container">
           <h2>{location.state.title}</h2>    
-          <span>{location.state.year} / </span>         
+          <span>{location.state.year} | </span>
           <span>{location.state.genres}</span> 
                         
-          <span>{location.state.summary}</span> 
-          <span>{location.state.poster}</span>    
-          <span>{location.state.medium_cover_image}</span>         
+          <p>{location.state.summary}</p>     
+
+          <img src={location.state.poster} className="detail__poster" alt = {location.state.title} />
        </div>  
+
+
+
+          //  <div class="movies">            
+          //   {movies.map(movie => ( 
+          //     <Movie
+          //       key={location.state.id}
+          //       id={location.state.id}
+          //       year={location.state.year} 
+          //       title={location.state.title}
+          //       summary={location.state.summary}
+          //       poster={location.state.poster}
+          //       genres={location.state.genres}
+          //     />
+          //   ))}
+          // </div>
+
       );
 
     } else {
